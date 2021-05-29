@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# image grid 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## installation 
+type 'npm install' in terminal
 
-## Available Scripts
+## run the project  
+type 'npm run start' 
 
-In the project directory, you can run:
+## assumptions 
 
-### `npm start`
+### the project 
+I used css modules to style the app
+variables.scss in the root folder is used for generic css values to maintain unified design language 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### product
+* the images need to be a responsive square, I skipped the responsive fonts for this excersize
+* the layouts might  be extended to more than just 2 options 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### the state 
+in a real case I would consider to add a global state manager, depends on how the product should be extended, in this excersize I added a state on the highest component - the App 
 
-### `npm test`
+### the API request
+I assume that the request is relatively small so I downloaded all the images and added to the state, in case we have large amounts of images, the correct solution would be to create a fetch request each time with 5 random items from the server, and not to download the entire image repository to the state, since it can cause memory issues at scale 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### tests 
+I would add tests for each components, including snapshots, tests I write usually include the verify the props and state changes a component can have, also test the services and helpers for edge cases, example: a case where the api returns less than batch size images should be tested..
+I would also test the app behaviour in no network and slow network cases
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

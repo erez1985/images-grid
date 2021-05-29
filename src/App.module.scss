@@ -1,0 +1,36 @@
+@import './vairables.scss';
+
+.main {
+  	.imagesContainer {
+  		padding: 0 20px;
+    	display: flex;
+    	max-width: 100%;
+
+    	> * {
+    		margin-left: 20px;
+			margin-bottom: 20px;
+
+			&:first-child {
+				margin-left: 0px;
+			}
+    	}
+
+
+
+	    &.columnLayout {
+	    	flex-direction: column;
+	    	justify-content: center;
+	    	align-items: center;
+
+	    	> * {
+	    		margin-left: 0;
+	    	}
+		}
+  	}
+  	.bottomBar {
+  		display: flex; 
+  		align-items: center;
+  		justify-content: center;
+  		padding: 20px;
+  	}
+}

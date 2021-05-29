@@ -1,0 +1,27 @@
+@import '../../vairables.scss';
+
+.main {
+	padding: 7px 10px;
+	cursor: pointer;
+	border-radius: 4px;
+	outline: 0;
+	border: none;
+	background: #7f8fab;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&.icon {
+		padding: 7px;	
+		height: auto;
+		background: $mainColor;
+	}
+
+	&.active {
+		background: #7f8fab;
+		pointer-events: none;
+	}
+
+
+}

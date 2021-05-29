@@ -1,0 +1,65 @@
+@import '../../vairables.scss';
+
+.main {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column; 
+	align-items: center;
+	justify-content: center;
+	background: $mainColor;
+	border-radius: 10px;
+	height: 20vw;
+	width: 20vw;
+	overflow: hidden;
+	box-shadow: $defaultBoxShadow;
+	position: relative;
+
+	.image {
+		max-height: 100%;
+		max-width: 100%;
+	}	
+	
+	.data {
+		background: #2d375fbb;
+		opacity: 0;
+		transition: opacity .15s ease-in;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		text-align: center;
+		padding: 10px;
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.description {
+			cursor: default;
+			margin-top: 50px;
+			transition: margin .15s ease-in;
+		}
+
+		.likesContainer {
+			display: flex;
+			align-items: center;
+			position: absolute;
+			bottom: 10px; 
+			left: 10px;
+			font-weight: 600;
+			.likes {
+				cursor: default;
+				margin-left: 7px;
+			}
+		}
+
+		&.hovered {	
+			opacity: 1;
+
+			.description {
+				margin-top: 0px;
+			}
+		}
+	}
+}
